@@ -8,6 +8,8 @@
 	export let placeholder: string = '';
 	export let min: string | number | null = null;
 
+	let ref: HTMLInputElement | null = null;
+
 	const dispatch = createEventDispatcher();
 
 	const handleInput = (event: Event) => {
@@ -35,6 +37,8 @@
 		type="number"
 		bind:value
 		on:input={handleInput}
+		bind:this={ref}
+		on:focus={() => ref?.select()}
 		{min}
 		{placeholder}
 	/>

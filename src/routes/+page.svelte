@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Calculator from '../components/Calculator.svelte';
 	import '../app.css';
+	import Favicon from '../../static/favicon-32x32.png';
 </script>
 
 <svelte:head>
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href={Favicon} />
 	<title>Frontend Mentor | Age calculator app</title>
 	<meta
 		name="description"
