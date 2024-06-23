@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		color: theme('colors.neutral.900');
+		font-size: theme('fontSize.input');
+		font-family: theme('fontFamily.sans');
+		font-weight: 700;
+		background-color: theme('colors.neutral.100');
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus {
+		border: none;
+		-webkit-text-fill-color: inherit;
+		-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+		box-shadow: 0 0 0px 1000px transparent inset;
+		transition: background-color 5000s ease-in-out 0s;
+		color: inherit;
+	}
+
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+
+	::selection {
+		background: theme('colors.accent');
+		color: theme('colors.white');
+	}
+}
