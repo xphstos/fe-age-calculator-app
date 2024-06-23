@@ -5,7 +5,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" type="image/png" sizes="32x32" href={Favicon} />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 	<title>Frontend Mentor | Age calculator app</title>
 	<meta
 		name="description"
