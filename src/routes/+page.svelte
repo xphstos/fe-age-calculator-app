@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Calculator from '../components/Calculator.svelte';
 	import '../app.css';
-	import Favicon from '../../static/favicon-32x32.png';
 </script>
 
 <svelte:head>
