@@ -25,6 +25,10 @@
 		.superRefine(({ year, month, day }, ctx) => {
 			const valDate = DateTime.fromObject({ year, month, day });
 
+			if (day < 0 || day > 31) return true;
+			if (month < 0 || month > 12) return true;
+			if (year < 1900 || new Date().getFullYear()) return true;
+
 			if (!valDate.isValid) {
 				ctx.addIssue({
 					code: z.ZodIssueCode.invalid_date,
